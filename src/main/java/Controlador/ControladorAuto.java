@@ -31,7 +31,16 @@ public class ControladorAuto extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
+		String accion=request.getParameter("accion");
+		if(accion!=null){
+			//aplicamos switch
+			switch(accion){
+			case "registrar":
+				//redireccion al frmregistrar
+				request.getRequestDispatcher("FrmRegistrar.jsp").forward(request, response);
+				
+			}
+		}
 		
 		//intanciamos la respectiva clase...
 		ClassCrudAuto cruauto = new ClassCrudAuto();

@@ -10,9 +10,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Listados de autos</title>
+
+
 </head>
 <body>
 <h1 aling="center"> Listado de Autos</h1>
+<h2>Registrar nuevo</h2>
+<a href="ControladorAuto?accion=registrar">Registrar</a>
  <table align="center">
 <tr>
 
@@ -21,7 +25,7 @@
 <th>Modelo</th>
 <th>Placa</th>
 </tr>
-</table>
+
 
 <%
 List<TblAuto> listar=(List<TblAuto>)request.getAttribute("listado");
